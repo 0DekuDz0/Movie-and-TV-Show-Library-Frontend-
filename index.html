@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Over+the+Rainbow&display=swap" rel="stylesheet">
+    <script src="slider.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="api.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="visible" id="navBar">
+        <div class="logo">
+            <h1>BudjBox</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li id="tendency" class="red">Tendency</li>
+                <li id="search">Search</li>
+                <li id="list">List</li>
+            </ul>
+        </div>
+        <div class="menu-b">
+            <ul>
+                <li class="profile">
+                    <p id="profile-name">Y</p>
+                </li>
+                <li>
+                    <div class="sign-btn">
+                        <h2>Sign Up</h2>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="tendency ">
+        
+            <div class="slider-container">
+                <div class="class">
+                    <h3>Movies</h3>
+                </div>
+                <div class="slider" id="movie-slider">
+                    
+                </div>
+            </div>
+            <div class="slider-container">
+                <div class="class">
+                    <h3>Series</h3>
+                </div>
+                <div class="slider" id="tv-slider">
+                        
+                    </div>
+                
+            </div>
+            <div class="slider-container">
+                <div class="class">
+                    <h3>People</h3>
+                </div>
+                <div class="slider" id="people-slider">
+                    
+                </div>
+            </div>
+    </section>
+    <section class="search ">
+        <div class="search-info">
+            <input type="search" list ="movie" id="search-input" placeholder="Scearch">
+            <datalist id="movie">
+                
+                
+            </datalist>
+            <select name="" id="movie-serie">
+                <option value="multy">Movies-Series</option>
+                <option value="movies">Movies</option>
+                <option value="series">Series</option>
+            </select>
+        </div>
+        <div class="search-result" id="list-movie-container">
+           
+        </div>
+    </section>
+    <section class="no-logged ">
+        <div class="backdrop"></div>
+        <div class="alert">
+            <h1>You should be logged to see your favorit movie</h1>
+        <div class="button">
+            <button class="sign-btn">Sign In</button>
+            <button class="log-btn">Log In</button>
+        </div>
+        </div>
+    </section>
+    <section class="empty-list ">
+        <div class="backdrop"></div>
+        <div class="alert">
+            <h1>Your favorit list movie is empty</h1>
+            <button id="add-in-list">Add movie to favorit list movie</button>
+        </div>
+    </section>
+    <section class="list" >
+        <div class="search-part">
+            <div class="search-info">
+                <input type="search" name="movie" id="search-input">
+                <select name="" id="movie-serie">
+                    <option value="multy">Movies-Series</option>
+                    <option value="movies">Movies</option>
+                    <option value="series">Series</option>
+                </select>
+            </div>
+            <div class="search-prev">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+                        </div>
+    
+                            <div class="img-prev">
+                                <img src="asset/rustin.jpg" alt="">
+        
+                            </div>
+                            <div class="img-prev">
+                                <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+                            </div>
+                            <div class="img-prev">
+                                <img src="asset/rustin.jpg" alt="">
+        
+                            </div>
+                            <div class="img-prev">
+                                <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+        
+                            </div>
+                            <div class="img-prev">
+                                <img src="asset/rustin.jpg" alt="">
+        
+                            </div>
+                            <div class="img-prev">
+                                <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+        
+                            </div>
+                            <div class="img-prev">
+                                <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+        
+                            </div>
+                            <div class="img-prev">
+                                <img src="asset/rustin.jpg" alt="">
+        
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fav-part">
+            <div class="part">
+                                <div class="title-part">
+                                    <h2>Drama</h2>
+                                </div>
+                        <div class="vertical-slider" id="vertical-slider-drama">
+                                              
+                        </div>
+                 </div>
+            
+        
+            <div class="part">
+                <div class="title-part">
+                    <h2>Action</h2>
+                </div>
+                <div class="vertical-slider">
+                    <div class="img-prev">
+                        <img src="asset/rustin.jpg" alt="">
+                    </div>
+
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                </div>
+            </div>
+            <div class="part">
+                <div class="title-part">
+                    <h2>Documentary</h2>
+                </div>
+                <div class="vertical-slider">
+                    <div class="img-prev">
+                        <img src="asset/rustin.jpg" alt="">
+                    </div>
+
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                </div>
+            </div>
+            <div class="part">
+                <div class="title-part">
+                    <h2>Funny</h2>
+                </div>
+                <div class="vertical-slider">
+                    <div class="img-prev">
+                        <img src="asset/rustin.jpg" alt="">
+                    </div>
+
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="">
+    
+                        </div>
+                        <div class="img-prev">
+                            <img src="asset/rustin.jpg" alt="">
+    
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="sign-log" id="sign-in">
+        <div class="backdrop"></div>
+        <div class="sign" >
+            <div class="logo">
+                <h1>BudjBox</h1>
+            </div>
+            <div class="exit">
+                <img src="asset/close.png" alt="">
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Pseudo" style="border-radius: 20px 20px 0 0;">
+                <input type="email" placeholder="Email">
+                <div class="password">
+                    <input type="password" name="password" id="password-sign" placeholder="Password">
+                    <img src="asset/show.png" alt="">
+                </div>
+                <div class="password">
+                    <input type="password" name="confirm password" id="confirm password" placeholder="Confirm Password" style="border-radius: 0 0 15px 15px ;">
+                    <img src="asset/show.png" alt="">
+                </div>            </div>
+            <div class="button">
+                <button class="sign-btn">Sign In</button>
+                <a href="#" class="log-btn">I already have an account</a>
+            </div>
+            
+        </div>
+
+    </section>
+    <section class="sign-log visible" id="log-in">
+        <div class="sign" >
+            <div class="logo">
+                <h1>BudjBox</h1>
+            </div>
+            <div class="exit">
+                <img src="asset/close.png" alt="">
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Pseudo" style="border-radius: 20px 20px 0 0;">
+                <div class="password">
+                    <input type="password" name="password" id="password-log" placeholder="Password" style="border-radius: 0 0 15px 15px ;">
+                    <img src="asset/show.png" alt="">
+                </div>
+            </div>
+            <div class="button">
+                <button class="log-btn">Log In</button>
+                <a href="#" class="sign-btn">I am new !</a>
+            </div>
+        </div>
+    </section>
+    <section class="loading ">
+        <div class="first-animation">
+            <ul class="loading">
+                <li>L</li>
+                <li>O</li>
+                <li>A</li>
+                <li>D</li>
+                <li>I</li>
+                <li>N</li>
+                <li>G</li>
+                <li>.</li>
+                <li>.</li>
+                <li>.</li>
+            </ul>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>
